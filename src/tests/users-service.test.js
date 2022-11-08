@@ -109,27 +109,27 @@ describe('findAllUsers',  () => {
 
   // sample users we'll insert to then retrieve
   const usernames = [
-    "larry", "curley", "moe"
+    "larry", "curley", "moe","stephCurry"
   ];
 
   // setup data before test
   beforeAll(() =>
-    // insert several known users
-    usernames.map(username =>
-      createUser({
-        username,
-        password: `${username}123`,
-        email: `${username}@stooges.com`
-      })
-    )
+      // insert several known users
+      usernames.map(username =>
+          createUser({
+            username,
+            password: `${username}123`,
+            email: `${username}@stooges.com`
+          })
+      )
   );
 
   // clean up after ourselves
   afterAll(() =>
-    // delete the users we inserted
-    usernames.map(username =>
-      deleteUsersByUsername(username)
-    )
+      // delete the users we inserted
+      usernames.map(username =>
+          deleteUsersByUsername(username.username)
+      )
   );
 
   test('can retrieve all users from REST API', async () => {
@@ -141,7 +141,7 @@ describe('findAllUsers',  () => {
 
     // let's check each user we inserted
     const usersWeInserted = users.filter(
-      user => usernames.indexOf(user.username) >= 0);
+        user => usernames.indexOf(user.username) >= 0);
 
     // compare the actual users in database with the ones we sent
     usersWeInserted.forEach(user => {

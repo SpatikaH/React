@@ -24,7 +24,7 @@ const links = [
     {label: 'Lists', expect: {textOnScreen: 'Lists Screen'}, icon: 'fa-list', path: '/lists'},
     {label: 'Profile', expect: {textOnScreen: 'Edit Profile'}, icon: 'fa-user', path: '/profile'},
     {label: 'More', expect: {textOnScreen: 'More Screen'}, icon: 'fa-circle-ellipsis', path: '/more'},
-    {label: 'Login', expect: {textOnScreen: 'ellenripley'}, icon: 'fa-user', path: '/login'},
+    {label: 'Login', expect: {textOnScreen: 'Anirudh'}, icon: 'fa-user', path: '/login'},
 ];
 
 describe('test123', () => {

@@ -3,13 +3,13 @@ import TuitStats from "./tuit-stats";
 import TuitImage from "./tuit-image";
 import TuitVideo from "./tuit-video";
 
-const Tuit = ({tuit, deleteTuit}) => {
+export const Tuit = ({tuit, deleteTuit}) => {
   return(
     <li className="p-2 ttr-tuit list-group-item d-flex rounded-0">
       <div className="pe-2">
         {
           tuit.postedBy &&
-          <img src={`../images/${tuit.postedBy.username}.jpg`}
+          <img src={`../images/${tuit.postedBy}.jpg`}
                className="ttr-tuit-avatar-logo rounded-circle"/>
         }
       </div>
@@ -34,4 +34,4 @@ const Tuit = ({tuit, deleteTuit}) => {
     </li>
   );
 }
-export default Tuit;
+//export default Tuit;
