@@ -1,4 +1,4 @@
-React app is deployed here - https://app.netlify.com/sites/lucky-bubblegum-53544e/deploys/6369e8d8d2f7c072b5056453
+React app is deployed here - https://6369e8d8d2f7c072b5056453--lucky-bubblegum-53544e.netlify.app/#/login
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
