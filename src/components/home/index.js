@@ -5,7 +5,6 @@ import {useEffect, useState} from "react";
 import {useLocation, useParams} from "react-router-dom";
 
 const Home = () => {
-  const location = useLocation();
   const {uid} = useParams();
   const [tuits, setTuits] = useState([]);
   const [tuit, setTuit] = useState('');
