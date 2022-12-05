@@ -3,7 +3,7 @@ import axios from "axios";
 //const BASE_URL = "https://node-himanthspatika.herokuapp.com";
 const BASE_URL = process.env.REACT_APP_BASE_URL
 
-const LOGIN_API = `${BASE_URL}/api/login`;
+const LOGIN_API = `${BASE_URL}/api/auth/login`;
 const USERS_API = `${BASE_URL}/users`;
 
 export const createUser = (user) =>
