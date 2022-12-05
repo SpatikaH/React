@@ -98,6 +98,8 @@ const Profile = () => {
       <Routes>
         <Route path="/mytuits"
                element={<MyTuits/>}/>
+        <Route path="/mylikes"
+                element={<MyLikes/>}/>
       </Routes>
     </div>
   );
