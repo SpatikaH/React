@@ -1,10 +1,10 @@
 import React from "react";
 import './tuits.css';
-import {Tuit} from "./tuit";
+import Tuit from "./tuit";
 import * as likesService from "../../services/likes-service";
-import { findAllTuits } from "../../services/tuits-service";
+import * as dislikesService from "../../services/dislikes-service";
 
-export const Tuits = ({tuits = [], deleteTuit, refreshTuits}) => {
+const Tuits = ({tuits = [], deleteTuit, refreshTuits}) => {
     const likeTuit = (tuit) => likesService
         .userTogglesTuitLikes("me", tuit._id)
         .then(refreshTuits)
@@ -29,3 +29,4 @@ export const Tuits = ({tuits = [], deleteTuit, refreshTuits}) => {
         </div>
     );
 }
+export default Tuits;

@@ -1,10 +1,10 @@
 import Tuits from "../tuits";
-import * as service from "../../services/dislike-service";
+import * as service from "../../services/dislikes-service";
 import {useEffect, useState} from "react";
 
 const MyDislikes = () => {
   const [dislikedTuits, setDislikedTuis] = useState([]);
-  
+
   const findTuitsIDislike = () =>
     service.findAllTuitsDislikedByUser("me")
       .then((tuits) => setDislikedTuis(tuits));
