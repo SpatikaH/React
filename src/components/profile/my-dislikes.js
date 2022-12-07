@@ -12,6 +12,7 @@ const MyDislikes = () => {
   
   return(
     <div>
+      <h3> Disliked tuits </h3>
       <Tuits tuits={dislikedTuits}
              refreshTuits={findTuitsIDislike}/>
     </div>

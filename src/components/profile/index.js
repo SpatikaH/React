@@ -15,7 +15,7 @@ const Profile = () => {
       const user = await authService.profile();
       setProfile(user);
     } catch (e) {
-      navigate('api/auth/login');
+      navigate('/login');
     }
   }, []);
   const logout = () => {

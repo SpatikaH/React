@@ -11,6 +11,7 @@ import Tuits from "../tuits";
 
    return(
      <div>
+      <h3> Liked tuits </h3>
        <Tuits tuits={likedTuits}
               refreshTuits={findTuitsILike}/>
      </div>

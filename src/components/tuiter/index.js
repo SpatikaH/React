@@ -5,6 +5,7 @@ import {BrowserRouter, Routes, Route, HashRouter} from "react-router-dom";
 import Home from "../home";
 import Bookmarks from "../bookmarks";
 import Profile from "../profile";
+import Signup from "../profile/singup";
 import './tuiter.css'
 import EditProfile from "../profile/edit-profile";
 import Explore from "../explore";
@@ -25,6 +26,7 @@ function Tuiter () {
           <div className="ttr-center-column">
             <Routes>
               <Route path="/" element={<Home/>}/>
+              <Route path="/signup" element={<Signup/>}/>
               <Route path="/login" element={<Login/>}/>
               <Route path="/tuiter" element={<Home/>}/>
               <Route path="/tuiter/:uid" element={<Home/>}/>

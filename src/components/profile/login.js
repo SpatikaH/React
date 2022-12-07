@@ -1,31 +1,19 @@
 import {useNavigate} from "react-router-dom";
-import {useEffect, useState} from "react";
-import * as userService from "../../services/users-service";
+import {useState, useEffect} from "react";
 import React from "react";
 import {UserList} from "./user-list";
 import * as authService from "../../services/auth-service"
+import * as userService from "../../services/users-service"
 
 export const Login = () => {
-  const [existingUsers, setExistingUsers] = useState([]);
-    // {username: 'user1', email: 'user1', password: 'user1', _id: '123'}
-  // ]);
-  const [newUser, setNewUser] = useState({});
-  const [loginUser, setLoginUser] = useState({});
+ const [existingUsers, setExistingUsers] = useState([]);
+ const [loginUser, setLoginUser] = useState({});
  const navigate = useNavigate()
 
-  const uuu = [
-    {username: 'ellen_ripley', email: 'ellen_ripley', password: 'ellen_ripley', _id: '123'},
-    {username: 'sarah', email: 'ellen_ripley', password: 'ellen_ripley', _id: '234'}
-  ]
-
-  const login = () =>
+const login = () =>
   authService.login(loginUser)
-    .then((user) => navigate('/profile/mytuits'))
-    .catch(e => alert(e));
-const register = () =>
-  authService.signup(newUser)
-      .then(() => navigate('/profile'))
-      .catch(e => alert(e));
+    .then(() => navigate('/profile'))
+    .catch(e => alert(loginUser.username));
 const deleteUser = (uid) =>
   userService.deleteUser(uid)
       .then(findAllUsers)
@@ -38,22 +26,6 @@ useEffect(findAllUsers, []);
 
 return (
   <div>
-    <h1>Register</h1>
-    <input className="mb-2 form-control"
-           onChange={(e) =>
-             setNewUser({...newUser, username: e.target.value})}
-           placeholder="username"/>
-    <input className="mb-2 form-control"
-           onChange={(e) =>
-             setNewUser({...newUser, password: e.target.value})}
-           placeholder="password" type="password"/>
-    <input className="mb-2 form-control"
-           onChange={(e) =>
-             setNewUser({...newUser, email: e.target.value})}
-           placeholder="email" type="email"/>
-    <button onClick={register} className="btn btn-primary mb-5">Register
-    </button>
-
     <h1>Login</h1>
     <input className="mb-2 form-control"
            onChange={(e) =>

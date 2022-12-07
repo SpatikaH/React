@@ -2,6 +2,7 @@ import React from "react";
 import TuitStats from "./tuit-stats";
 import TuitImage from "./tuit-image";
 import TuitVideo from "./tuit-video";
+import uploadedImage from "../../images/uploadedImage.png";
 
 const Tuit = ({tuit, deleteTuit, likeTuit, dislikeTuit}) => {
   return(
@@ -9,7 +10,7 @@ const Tuit = ({tuit, deleteTuit, likeTuit, dislikeTuit}) => {
       <div className="pe-2">
         {
           tuit.postedBy &&
-          <img src={`../images/${tuit.postedBy}.jpg`}
+          <img src={uploadedImage}
                className="ttr-tuit-avatar-logo rounded-circle"/>
         }
       </div>

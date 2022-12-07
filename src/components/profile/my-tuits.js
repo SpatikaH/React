@@ -12,9 +12,12 @@ const MyTuits = () => {
   tuitService.deleteTuit(tid)
       .then(findMyTuits);
   return(
+    <div>
+    <h3> My tuits </h3>
     <Tuits tuits={tuits}
            deleteTuit={deleteTuit} refreshTuits={findMyTuits}
            />
+    </div>
   );
 };
 
