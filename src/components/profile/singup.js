@@ -15,13 +15,13 @@ const Signup = () => {
     return (
         <div>
             <h1>Signup</h1>
-            <input onChange={(e) =>
+            <input placeholder="Username" onChange={(e) =>
                 setNewUser({...newUser,
                                username: e.target.value})}/>
-            <input onChange={(e) =>
+            <input placeholder="Password" onChange={(e) =>
                 setNewUser({...newUser,
                                password: e.target.value})}/>
-            <input onChange={(e) =>
+            <input placeholder="Email" onChange={(e) =>
                 setNewUser({...newUser,
                                email: e.target.value})}/>
             <button onClick={signup}>
